@@ -1,6 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import packagePage from "../pages/packagePage";
-import venuPage from "../pages/venuPage";
+import venuePage from "../pages/venuePage";
 import orderSummaryPage from "../pages/orderSummaryPage";
 import personalDetailsPage from "../pages/personalDetailsPage";
 
@@ -26,7 +26,7 @@ When(/^I select the "([^"]*)" Health MOTs package$/, (packageName) => {
 });
 
 When(/^I input my postcode as "([^"]*)"$/, (postCode) => {
-    venuPage.elements.getVenueSearchBoxInput()
+    venuePage.elements.getVenueSearchBoxInput()
         .click()
         .type(postCode);
 });
@@ -36,17 +36,17 @@ When(/^I choose the location "([^"]*)"$/, (location) => {
 });
 
 When(/^I click on the Search button$/, () => {
-    venuPage.elements.getVenueSearchBtn().click();
+    venuePage.elements.getVenueSearchBtn().click();
 });
 
 When(/^I select a convenient location, "([^"]*)" and time$/, (location) => {
     selectedLocation = location;
-    venuPage.selectPreferredLocation(location);
-    venuPage.selectPreferredDayAndTime();
+    venuePage.selectPreferredLocation(location);
+    venuePage.selectPreferredDayAndTime();
 });
 
 When(/^I click on the Confim button on the Venue page$/, () => {
-    venuPage.elements.getConfirmBtn().click();
+    venuePage.elements.getConfirmBtn().click();
 });
 
 When(/^I verify my order summary and click Continue button$/, () => {
